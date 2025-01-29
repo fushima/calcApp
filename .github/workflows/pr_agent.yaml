@@ -18,7 +18,10 @@ jobs:
       - name: Run Qodo Merge
         uses: Codium-ai/pr-agent@main
         env:
-          OPENAI_KEY: ${{ secrets.ANTHROPIC_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          config.model: "claude-3-5-sonnet"  # 使用するモデルを指定
+#          OPENAI_KEY: ${{ secrets.ANTHROPIC_KEY }}
+#          config.model: "claude-3-5-sonnet"  # 使用するモデルを指定
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          config.model: "gpt-4o"  # 使用するモデルを指定
+
           pr_reviewer.extra_instructions: "回答は必ず全て日本語で記述してください。"  
